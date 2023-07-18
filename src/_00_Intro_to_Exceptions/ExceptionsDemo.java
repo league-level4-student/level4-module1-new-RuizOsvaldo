@@ -1,5 +1,7 @@
 package _00_Intro_to_Exceptions;
 
+import javax.swing.JOptionPane;
+
 public class ExceptionsDemo {
 
     /*
@@ -39,7 +41,17 @@ public class ExceptionsDemo {
     public static void main(String[] args) {
 
         // 1. Create a try/catch block (Hint: type "try" and ctrl + space).
-
+        try {
+            testPositive(1);
+        } catch (NegativeNumberException e) {
+            // TODO: handle exception
+            e.scaryPopup();
+            System.out.println("Negative Number Exception caught");
+        } catch (Exception e){
+            e.printStackTrace();
+        } finally{
+            JOptionPane.showMessageDialog(null, "WORKS");
+        }
         /*
          * 2. Call the testFiveOrGreater method with a value less than 5 inside
          * the try block.
@@ -87,6 +99,11 @@ public class ExceptionsDemo {
      * 
      * 10. Try running the program. Did it show a pop-up?
      */
+    public static void testPositive(int n) throws NegativeNumberException{
+        if(n < 0){
+            throw new NegativeNumberException();
+        }
+    }
 
     /*
      * 11. Add a finally block after your catch block(Hint: finally{}). A
