@@ -1,6 +1,6 @@
 package _03_Text_Funkifier;
 
-public class MixedCapsString {
+public class MixedCapsString implements TextFunkifier {
 
     private String unfunkifiedText;
 
@@ -8,6 +8,12 @@ public class MixedCapsString {
 
         this.unfunkifiedText = unfunkifiedText;
 
+    }
+
+    @Override
+    public String funkifyText() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'funkifyText'");
     }
 
 }

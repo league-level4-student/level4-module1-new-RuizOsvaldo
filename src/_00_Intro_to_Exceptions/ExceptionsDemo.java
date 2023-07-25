@@ -102,6 +102,8 @@ public class ExceptionsDemo {
     public static void testPositive(int n) throws NegativeNumberException{
         if(n < 0){
             throw new NegativeNumberException();
+        }else{
+            System.out.println("Number was not negative.");
         }
     }
 
