@@ -30,6 +30,7 @@ public class Hospital {
             try {
                 doctors.get(doctorNumber).assignPatient(unassignedPatients.get(i));
             } catch (DoctorFullException e) {
+                e.printStackTrace();
                 doctorNumber++;
                 i--;
             }
